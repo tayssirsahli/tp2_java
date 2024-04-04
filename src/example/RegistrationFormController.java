@@ -1,5 +1,6 @@
 package example;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -31,9 +32,7 @@ public class RegistrationFormController {
 			 alert.initOwner(owner);
 			 alert.show();
 			
-		}
-	
-		if(emailField.getText().isEmpty())
+		}else if(emailField.getText().isEmpty())
 		{
 			Alert alert2 = new Alert(AlertType.ERROR);
 			 alert2.setTitle("Form Error!");
@@ -42,8 +41,7 @@ public class RegistrationFormController {
 			 alert2.initOwner(owner);
 			 alert2.show();
 			
-		}
-		if(passwordField.getText().isEmpty())
+		}else if(passwordField.getText().isEmpty())
 		{
 			Alert alert3 = new Alert(AlertType.ERROR);
 			alert3.setTitle("Form Error!");
@@ -63,5 +61,15 @@ public class RegistrationFormController {
 		 alert.show();
 		}
 	}
+	 @FXML
+	    protected void handleExitButtonAction(ActionEvent event) {
+		 nameField.setText("");
+		    emailField.setText("");
+		    passwordField.setText("");
+	    }
+	 
+		   
+		
+
 
 }

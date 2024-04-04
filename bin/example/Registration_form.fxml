@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="Pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="example.RegistrationFormController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="example.RegistrationFormController">
    <children>
       <Label layoutX="28.0" layoutY="48.0" prefHeight="21.0" prefWidth="97.0" text="Full name : ">
          <font>
@@ -32,7 +31,7 @@
       <TextField id="emailField" fx:id="emailField" layoutX="277.0" layoutY="132.0" />
       <HBox layoutX="180.0" layoutY="278.0" prefHeight="55.0" prefWidth="195.0">
          <children>
-            <Button mnemonicParsing="false" text="exit" />
+            <Button mnemonicParsing="false" onAction="#handleExitButtonAction" prefHeight="31.0" prefWidth="87.0" text="exit" />
             <Button id="submitButton" fx:id="submitButton" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="31.0" prefWidth="97.0" text="Submit" />
          </children>
          <opaqueInsets>
@@ -40,4 +39,4 @@
          </opaqueInsets>
       </HBox>
    </children>
-</fx:root>
+</Pane>
